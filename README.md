@@ -26,7 +26,7 @@ A Telegram notification is also sent.
  - Set the variable `input` with the correct GPIO input used (see pinout [here](https://pinout.xyz/))
  - Set the variables `home_id` with your *home_id*: for retrieve it, go to [https://dev.netatmo.com/apidocumentation/energy#homesdata](https://dev.netatmo.com/apidocumentation/energy#homesdata), and execute *homesdata* API request ([https://api.netatmo.com/api/homesdata](https://api.netatmo.com/api/homesdata)) and get *home_id* in the response
  - Set the variables `telegram_chat_id` and `telegram_bot_token`
- - use full path in `config.read('/home/user/netatmo.ini')`
+ - edit the full path of the settings file in `config.read('/home/user/netatmo.ini')`
  - go to [https://dev.netatmo.com/](https://dev.netatmo.com/), enter your app, scroll to *token generator*, choose the scopes *write_thermostat* and *read_thermostat* and click generate; accept on the authorization page and the copy/paste the tokens in the config file [netatmo.ini](./netatmo.ini).
 # Install as service Raspbian
 Edit the file [bentel_netatmo_connect.service](./bentel_netatmo_connect.service) with your path in line `ExecStart=/usr/bin/python3 /home/user/bentel_netatmo_connect_v5.py` and place it to /etc/systemd/system and enable the service with `sudo systemctl enable bentel_netatmo_connect.service`.
