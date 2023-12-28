@@ -10,7 +10,7 @@ If GPIO is high the script set the thermostat mode to *schedule* or do nothing i
 A Telegram notification is also sent.
 
 > [!NOTE]
-> The OAuth2 tokens required by the Netatmo API, *access_token* and *refresh_token* are stored in a config file; other parameters are hard-coded into the script; customize them to your needs.
+> The OAuth2 tokens required by the Netatmo API, *access_token* and *refresh_token* are stored in a config file; other parameters are hard-coded into the script; customize them to your needs. (see [Setup section](https://github.com/giacy86/bentel_netatmo_connect/blob/main/README.md#setup))
 
 # Schematic (for Bentel Absoluta)
 ![schematic](resources/bentel_netatmo_connect_v1_Schematic.svg)
