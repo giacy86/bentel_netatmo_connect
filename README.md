@@ -20,7 +20,7 @@ A Telegram notification is also sent.
  - Requests python library `pip install requests`
  - Requests OAuth2 python library `pip install requests-oauth2`
  - Telegram BOT for notifications - see [here](https://core.telegram.org/bots/tutorial)
- # Setup
+# Setup
  - Create an app in [Netatmo developer console](https://dev.netatmo.com/).
  - Set the variables `client_id` and `client_secret`
  - Set the variable `input` with the correct GPIO input used (see pinout [here](https://pinout.xyz/))
@@ -28,3 +28,7 @@ A Telegram notification is also sent.
  - Set the variables `telegram_chat_id` and `telegram_bot_token`
  - use full path in `config.read('/home/user/netatmo.ini')`
  - go to [https://dev.netatmo.com/](https://dev.netatmo.com/), enter your app, scroll to *token generator*, choose the scopes *write_thermostat* and *read_thermostat* and click generate; accept on the authorization page and the copy/paste the tokens in the config file [netatmo.ini](./netatmo.ini).
+# Install as service Raspbian
+Place the file [bentel_netatmo_connect.service](./bentel_netatmo_connect.service) to /etc/systemd/system and enable the service with `sudo systemctl enable bentel_netatmo_connect.service`.
+# Usage
+`sudo service bentel_netatmo_connect start`
