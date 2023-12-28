@@ -29,6 +29,6 @@ A Telegram notification is also sent.
  - use full path in `config.read('/home/user/netatmo.ini')`
  - go to [https://dev.netatmo.com/](https://dev.netatmo.com/), enter your app, scroll to *token generator*, choose the scopes *write_thermostat* and *read_thermostat* and click generate; accept on the authorization page and the copy/paste the tokens in the config file [netatmo.ini](./netatmo.ini).
 # Install as service Raspbian
-Place the file [bentel_netatmo_connect.service](./bentel_netatmo_connect.service) to /etc/systemd/system and enable the service with `sudo systemctl enable bentel_netatmo_connect.service`.
+Edit the file [bentel_netatmo_connect.service](./bentel_netatmo_connect.service) with your path in line `ExecStart=/usr/bin/python3 /home/user/bentel_netatmo_connect_v5.py` and place it to /etc/systemd/system and enable the service with `sudo systemctl enable bentel_netatmo_connect.service`.
 # Usage
 `sudo service bentel_netatmo_connect start`
